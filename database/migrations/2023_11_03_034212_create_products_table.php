@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->numeric('qty'); // Changed 'numeric' to 'integer'
-            $table->decimal('price'); // Added precision and scale for the price
+            $table->unsignedInteger('qty'); // Assuming 'qty' will not be negative
+            $table->decimal('price', 8, 2); // Precision of 8 and scale of 2
             $table->text('description');
             $table->timestamps();
         });
@@ -29,4 +29,3 @@ return new class extends Migration
         Schema::dropIfExists('products');
     }
 };
-

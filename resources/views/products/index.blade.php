@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="width: 300px; height: 650px; background-image: url('https://i.pinimg.com/originals/55/a5/e4/55a5e47c099e0ddaf60fcfdcf3761eb6.jpg'); background-size: cover; background-position: center; color: black;">
     <h1>Index</h1>
     <div>
         @if(session()->has('success'))
@@ -18,7 +18,9 @@
     </div>
     <div>
         <div>
-            <a href="{{route('product.create')}}"> Add a Product</a>
+            <a href="{{route('product.create')}}"> Add a Product</a>  
+            <br>
+            <a href="{{route('dashboard')}}">Return to Dashboard</a>
        </div>
         <table border="1">
             <tr>

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Products</title>
 </head>
-<body>
+<body style="width: 300px; height: 650px; background-image: url('https://i.pinimg.com/originals/55/a5/e4/55a5e47c099e0ddaf60fcfdcf3761eb6.jpg'); background-size: cover; background-position: center; color: black;">
     <h1>Edit a Product</h1>
+    <a href="{{route('dashboard')}}">Return to Dashboard</a>
     <form method="post" action="{{route('product.update',['product'=>$product])}}"> 
         @csrf
         @method('PUT')
